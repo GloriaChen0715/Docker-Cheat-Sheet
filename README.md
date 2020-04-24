@@ -1,5 +1,21 @@
 # Docker-Cheat-Sheet
 
+
+
+## Get the server version:
+
+$ `docker version --format '{{.Server.Version}}'`
+
+1.8.0
+You can also dump raw JSON data:
+
+$ `docker version --format '{{json .}}'`
+
+`{"Client":{"Version":"1.8.0","ApiVersion":"1.20","GitCommit":"f5bae0a","GoVersion":"go1.4.2","Os":"linux","Arch":"am"}`
+
+
+
+
 ## Monitoring/Removing Images
 
 | task | command |
