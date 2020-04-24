@@ -2,7 +2,9 @@
 
 
 
-## Get the server version:
+## Check Version
+
+Get the server version:
 
 $ `docker version --format '{{.Server.Version}}'`
 
@@ -13,7 +15,16 @@ $ `docker version --format '{{json .}}'`
 
 `{"Client":{"Version":"1.8.0","ApiVersion":"1.20","GitCommit":"f5bae0a","GoVersion":"go1.4.2","Os":"linux","Arch":"am"}`
 
+##Containers
 
+Your basic isolated Docker process. Containers are to Virtual Machines as threads are to processes. Or you can think of them as chroots on steroids.
+
+**Lifecycle**
+`docker create` creates a container but does not start it.
+`docker rename` allows the container to be renamed.
+`docker run` creates and starts a container in one operation.
+`docker rm` deletes a container.
+`docker update` updates a container's resource limits.
 
 
 ## Monitoring/Removing Images
