@@ -15,7 +15,7 @@ $ `docker version --format '{{json .}}'`
 
 `{"Client":{"Version":"1.8.0","ApiVersion":"1.20","GitCommit":"f5bae0a","GoVersion":"go1.4.2","Os":"linux","Arch":"am"}`
 
-##Containers
+## Containers
 
 Your basic isolated Docker process. Containers are to Virtual Machines as threads are to processes. Or you can think of them as chroots on steroids.
 
@@ -26,6 +26,18 @@ Your basic isolated Docker process. Containers are to Virtual Machines as thread
 `docker rm` deletes a container.
 `docker update` updates a container's resource limits.
 
+If you want to map a directory on the host to a docker container, `docker run -v $HOSTDIR:$DOCKERDIR`
+
+
+**Starting and Stopping**
+`docker start` starts a container so it is running.
+`docker stop` stops a running container.
+`docker restart` stops and starts a container.
+`docker pause` pauses a running container, "freezing" it in place.
+`docker unpause` will unpause a running container.
+`docker wait` blocks until running container stops.
+`docker kill` sends a SIGKILL to a running container.
+`docker attach` will connect to a running container.
 
 ## Monitoring/Removing Images
 
